@@ -1,92 +1,80 @@
-#  Documentação do Projeto: Calculadora Web
+#  Projeto: Calculadora Web
 
-##  Visão Geral
-Este projeto é uma calculadora interativa desenvolvida para navegadores, permitindo operações matemáticas básicas com uma interface responsiva e um botão de energia para controle de funcionamento.
+##  Introdução
+
+Este é um projeto simples de uma calculadora web que desenvolvi utilizando **HTML**, **CSS** e **JavaScript**. A ideia foi criar uma interface funcional e responsiva que permitisse realizar operações matemáticas básicas, como soma, subtração, multiplicação e divisão. Além disso, implementei um botão de energia (ON/OFF) para simular o funcionamento de uma calculadora física.
 
 ---
 
 ##  Tecnologias Utilizadas
 
-| Linguagem/Tecnologia | Finalidade |
-|----------------------|------------|
-| **HTML5**            | Estrutura da interface da calculadora |
-| **CSS3**             | Estilização visual e responsividade |
-| **JavaScript (ES6)** | Lógica funcional e interatividade |
+- **HTML5**: Estrutura da página e dos elementos da calculadora.
+- **CSS3**: Estilização da interface, incluindo responsividade para dispositivos móveis.
+- **JavaScript (ES6)**: Lógica de funcionamento da calculadora e controle de interatividade.
 
 ---
 
-##  Estrutura de Arquivos
+##  Estrutura do Projeto
 
-- `index.html` → Estrutura da interface
-- `style.css` → Estilos visuais e responsividade
-- `script.js` → Lógica de funcionamento da calculadora
-
----
-
-##  Componentes da Interface
-
-- **Display (`#resultado`)**: Mostra os números e resultados
-- **Botões Numéricos (0–9)**: Inserem dígitos
-- **Botões de Operações (`+`, `-`, `*`, `/`)**: Inserem operadores
-- **Botão `C`**: Limpa o display
-- **Botão `←`**: Apaga o último caractere
-- **Botão `=`**: Executa o cálculo
-- **Botão `ON/OFF`**: Liga/desliga a calculadora
+- `index.html`: Contém a estrutura principal da calculadora.
+- `style.css`: Responsável pela aparência visual e adaptação da interface.
+- `script.js`: Implementa toda a lógica de inserção de números, operações, cálculo e controle de energia.
 
 ---
 
-##  Funcionalidades JavaScript
+##  Funcionalidades
 
-### `insert(num)`
-Adiciona número ou operador ao display, se a calculadora estiver ligada.
+### 1. Inserção de Números e Operadores
+Os botões numéricos e de operação adicionam os respectivos valores ao display da calculadora.
 
-### `clean()`
+### 2. Botão "C" (Clear)
 Limpa completamente o conteúdo do display.
 
-### `back()`
+### 3. Botão "←" (Backspace)
 Remove o último caractere digitado.
 
-### `calcular()`
-Avalia a expressão matemática com `eval()`, tratando erros com `try/catch`.
+### 4. Botão "=" (Calcular)
+Utiliza `eval()` para avaliar a expressão matemática digitada. Em caso de erro, exibe "Erro" ou "Nada..." se o campo estiver vazio.
 
-### `powerToggle()`
-Alterna o estado da calculadora entre ligada e desligada, habilitando ou desabilitando os botões.
+### 5. Botão "ON/OFF"
+Liga ou desliga a calculadora. Quando desligada, todos os botões (exceto o de energia) são desativados e o display é limpo.
 
 ---
 
-##  Estilização CSS
+##  Estilo e Layout
 
-- Layout centralizado com `transform: translate(-50%, -30%)`
-- Botões estilizados com efeitos de hover e clique
-- Responsividade com media queries para telas menores
-- Cores temáticas: fundo gradiente, botões escuros, destaque em vermelho no clique
+- Interface centralizada com fundo em gradiente (preto e azul).
+- Botões escuros com efeito hover e clique em vermelho.
+- Display com alinhamento à direita e cor contrastante.
+- Responsividade garantida com media queries para telas menores que 400px.
 
 ---
 
 ##  Responsividade
 
-- Uso de unidades relativas (`vw`, `vh`) para adaptação
-- Fontes e botões redimensionados proporcionalmente
-- Interface otimizada para dispositivos móveis
+A calculadora se adapta bem a dispositivos móveis:
+- Botões redimensionados proporcionalmente.
+- Fontes ajustadas para melhor leitura.
+- Layout flexível para diferentes tamanhos de tela.
 
 ---
 
-##  Observações Técnicas
+##  Considerações Técnicas
 
-- O uso de `eval()` pode representar riscos de segurança. Para projetos mais robustos, recomenda-se bibliotecas como [math.js](https://mathjs.org).
-- O botão ON/OFF simula o funcionamento de uma calculadora física, oferecendo controle de estado.
-
----
-
-##  Sugestões de Melhoria
-
-- Suporte a teclado físico (`keydown`)
-- Histórico de cálculos
-- Suporte a parênteses e funções matemáticas avançadas
-- Substituição de `eval()` por uma função segura
+- O uso de `eval()` foi feito por simplicidade, mas reconheço que não é a abordagem mais segura. Em projetos maiores, recomendaria o uso de bibliotecas como [math.js](https://mathjs.org).
+- A lógica de controle de energia foi implementada para simular o comportamento de uma calculadora física, adicionando um toque extra de realismo.
 
 ---
 
-##  Licença
+##  Possíveis Melhorias Futuras
 
-Este projeto é de uso livre para fins educacionais e pessoais. Para uso comercial, recomenda-se revisar as práticas de segurança e otimização.
+- Implementar suporte ao teclado físico (eventos de `keydown`).
+- Adicionar histórico de cálculos.
+- Suporte a parênteses e funções matemáticas avançadas.
+- Substituir `eval()` por uma função de parsing segura.
+
+---
+
+##  Conclusão
+
+Esse projeto foi uma ótima oportunidade para praticar manipulação de DOM, lógica condicional e responsividade. A calculadora funciona bem em diferentes dispositivos e tem uma interface intuitiva. Fico aberto a sugestões e melhorias!
